@@ -1,0 +1,12 @@
+engine:
+  merge:
+    - include: [ "schema/**" ]
+      chain:
+        - type: RewritePath
+          regex: schema/(.*)
+          rewriteTo: "'library/src/main/resources/' + #g1"
+    - include: [ "master/**" ]
+      chain:
+        - type: RewritePath
+          regex: schema/(.*)
+          rewriteTo: "'library/src/main/resources/' + #g1"
