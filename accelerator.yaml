@@ -8,5 +8,5 @@ engine:
     - include: [ "master/**" ]
       chain:
         - type: RewritePath
-          regex: schema/(.*)
+          regex: master/(.*)
           rewriteTo: "'library/src/main/resources/' + #g1"
